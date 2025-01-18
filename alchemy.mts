@@ -11,11 +11,13 @@ dotenv.config();
 //     Network.LINEA_SEPOLIA,
 //     Network.ZETACHAIN_MAINNET,
 //     Network.ZETACHAIN_TESTNET,
+//     Network.ZORA_MAINNET,
+//     Network.ZORA_TESTNET,
 // ]
 
 const alchemy = new Alchemy({
   apiKey: process.env.ALCHEMY_API_KEY,
-  network: Network.AVAX_FUJI,
+  network: Network.LINEA_SEPOLIA,
 });
 
 type TokenAmount = {
@@ -252,15 +254,14 @@ const nft = async (walletAddress: string, nftContractAddress: string, nftMetadat
 }
 
 const main = async () => {
-  // const walletAddress = "0x9F6a798CB2726940D3528d8bb27C06fE04ECced2";  // Example wallet
-  const walletAddress = "0x6De9109a2333845A15ddE1f2F0c020b37421e1f5";
-  const erc20ContractAddress = "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7";  // USDT on Avalanche
+  const walletAddress = "0x228466F2C715CbEC05dEAbfAc040ce3619d7CF0B";
+  const erc20ContractAddress = "0x75263A05D788da205a0fB719a4Fa93a403e0cBc0";  // Zora on Zora Mainnet
 
   try {
     await checkErc20(walletAddress, erc20ContractAddress);
     await checkNativeToken(walletAddress);
     await contractDeploymentTransactions(walletAddress);
-    await nft(walletAddress, "0xa6de3390a15D131c9D8bddB4C8e8B43430c01eA0", {});
+    await nft(walletAddress, "0x1195Cf65f83B3A5768F3C496D3A05AD6412c64B7", {});
   } catch (error) {
     console.error("Error:", error);
   }

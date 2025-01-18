@@ -401,7 +401,7 @@ aes-js@3.0.0:
   resolved "https://registry.yarnpkg.com/aes-js/-/aes-js-3.0.0.tgz#e21df10ad6c2053295bcbb8dab40b09dbea87e4d"
   integrity sha512-H7wUZRn8WpTq9jocdxQ2c8x2sKo9ZVmzfRE13GiNJXfp7NcKYEdvl3vspKjXox6RIG2VtaRe4JFvxG4rqp2Zuw==
 
-alchemy-sdk@^3.4.4:
+alchemy-sdk@3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/alchemy-sdk/-/alchemy-sdk-3.5.1.tgz#7bd91366a2b76bb1f48d0efe618f1c558e677c43"
   integrity sha512-4jlkESPanXzASrREQqcO6DWF2665HutSAxHKxABYNDgf/WkMeHfqXfojDhbVmY+VoyvXczWaQ9tsGXH1YQD/6A==
